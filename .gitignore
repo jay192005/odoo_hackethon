@@ -4,3 +4,4 @@ venv/
 *.zip
 dist/
 .DS_Store
+backend/uploads/
