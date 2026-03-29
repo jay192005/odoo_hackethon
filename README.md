@@ -1,73 +1,61 @@
-# ExpenseFlow 🚀
+# 🚀 ExpenseFlow
 
-> A next-generation Reimbursement & Expense Management System, built for the Odoo Hackathon.
+**A smart, simple, and beautiful Reimbursement Management System built for the Odoo Hackathon.**
 
-ExpenseFlow simplifies the chaotic process of managing team expenses by introducing a sleek, intuitive, and highly responsive platform. Say goodbye to messy email threads and lost receipts. ExpenseFlow brings real-time status tracking, robust multi-tier approval workflows, and centralized team expense dashboards—all under one beautifully designed UI. 
+Managing team expenses is usually a headache full of messy email threads, lost paper receipts, and slow payouts. **ExpenseFlow** fixes this. We built a fast, modern web platform that makes submitting, reviewing, and tracking expenses completely painless for everyone involved.
 
-Designed with human experience in mind, ExpenseFlow aims to make submitting, reviewing, and tracking expenses as painless as possible.
+## ✨ Why ExpenseFlow? (Key Features)
 
----
+* **👥 Three Dedicated Dashboards:** Custom, easy-to-use screens designed specifically for Employees (submitters), Managers (reviewers), and Admins (final decision-makers).
+* **🧾 Smart Receipt Uploads:** Just drag and drop! Upload receipt images or PDFs and view them directly inside the app without needing to download them.
+* **✅ Multi-Step Approval Engine:** Built-in security rules ensure an expense goes to the direct Manager first, and only moves to the Admin for final payout after the manager approves it.
+* **💬 Clear Communication:** If an expense is rejected, the manager must provide a reason. This reason is highlighted in red directly on the employee's dashboard so there is no confusion.
+* **🎨 Beautiful Experience:** Built with a focus on human experience. Expect smooth animations, modern glassmorphic designs, and instant loading times.
 
-## ✨ Features
+## 🛠 Our Tech Stack
 
-- **Dynamic Role-based Dashboards:** Tailored user experiences for Employees, Managers, and Admins.
-- **Smart Receipt Management:** Supports drag-and-drop file uploads (Images & PDFs) with dynamic previewing and intuitive inline viewer.
-- **Multi-Level Approval Workflow:** Hardcoded security ensures an expense passes through Manager approval before moving to the Admin queue for ultimate sign-off.
-- **Micro-interactions & UX:** Crafted using Tailwind CSS, glassmorphic touches, and smooth transitions that bring the interface to life.
-- **Automated Rejection Transparency:** When a manager or admin rejects an expense, a clear, red-highlighted reason is visibly displayed right on the submitter's dashboard.
+**Frontend:**
+* **Framework:** React + Vite (Using TypeScript)
+* **Styling:** Tailwind CSS (Modern, responsive UI)
+* **Icons & Fonts:** Lucide React & Google Fonts (Inter)
+* **Routing:** React Router
 
----
-
-## 🛠 Tech Stack
-
-**Frontend Framework:** React + Vite
-**Language:** TypeScript
-**Styling Ecosystem:** Tailwind CSS, PostCSS, Google Fonts (Inter)
-**Icons:** Lucide React
-**Routing & Navigation:** React Router
-**Backend Engine:** Flask (Python)
-**Database Mapping:** MySQL + PyMySQL DB adapter
-**Authentication:** Context-backed JWT flows
+**Backend:**
+* **Engine:** Python with Flask 
+* **Database:** MySQL (Connected via PyMySQL)
+* **Security:** JWT (JSON Web Tokens) for safe, encrypted logins
 
 ---
 
-## 🚀 Getting Started
+## 🏁 How to Run the Project Locally
 
-### 1. Requirements
-Ensure you have the following installed on your machine:
-- Node.js (v18+)
-- Python (v3.10+)
-- MySQL Server
+Follow these simple steps to get the project running on your own computer.
+
+### 1. What You Need Installed
+Make sure you have these downloaded and installed:
+* [Node.js](https://nodejs.org/) (v18 or higher)
+* [Python](https://www.python.org/downloads/) (v3.10 or higher)
+* MySQL Server
 
 ### 2. Database Setup
-1. Create a MySQL database named `odoo_hack`.
-2. Seed the database tables by utilizing the mock architecture in the `/backend` folder.
-3. Configure your local `.env` variables using `backend/.env.example` as a template.
+1. Open your MySQL client and create a new database named: `odoo_hack`
+2. Look inside the `backend/` folder for the database schema/mock data to set up your tables.
+3. In the `backend/` folder, find the `.env.example` file. Copy it, rename the copy to `.env`, and fill in your local MySQL password and details.
 
-### 3. Running the API Backend
-Open your terminal and navigate to the `backend/` directory:
+### 3. Start the Backend (API)
+Open your terminal and run these commands to start the Python server:
 
-```bash
-cd backend
-pip install -r requirements.txt
-python app.py
-```
+    cd backend
+    pip install -r requirements.txt
+    python app.py
 
-The Flask API will start running on port `5000`.
+*The API will now be running on `http://localhost:5000`*
 
-### 4. Running the Frontend Portal
-In a new terminal, navigate to the `frontend/` directory:
+### 4. Start the Frontend (Website)
+Open a **new** terminal window and run these commands to start the React app:
 
-```bash
-cd frontend
-npm install
-npm run dev
-```
+    cd frontend
+    npm install
+    npm run dev
 
-The app will be served via Vite (usually on port `5173`). Have fun exploring the portals!
-
----
-
-## 👨‍💻 Developed For
-**Odoo Hackathon Submission**
-*Built with ❤️ by Hackathon Team*
+*The website will now be running on `http://localhost:5173`. Click the link in your terminal to open it in your browser and explore ExpenseFlow!*
